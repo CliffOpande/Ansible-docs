@@ -1,0 +1,376 @@
+2023-04-13 01:46:22,265 p=11110 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 01:46:32,701 p=11110 u=vagrant n=ansible | 172.31.0.245 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.0.245 port 22: Connection timed out", 
+    "unreachable": true
+}
+2023-04-13 01:48:31,169 p=11177 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 01:48:41,562 p=11177 u=vagrant n=ansible | 172.31.0.245 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.0.245 port 22: Connection timed out", 
+    "unreachable": true
+}
+2023-04-13 02:06:34,855 p=11676 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 02:06:45,439 p=11676 u=vagrant n=ansible | 172.31.0.245 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.0.245 port 22: Connection timed out", 
+    "unreachable": true
+}
+2023-04-13 02:16:40,227 p=11962 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 02:16:50,530 p=11962 u=vagrant n=ansible | 172.31.0.245 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.0.245 port 22: Connection timed out", 
+    "unreachable": true
+}
+2023-04-13 02:19:14,497 p=12054 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 02:19:24,775 p=12054 u=vagrant n=ansible | 172.31.0.245 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.0.245 port 22: Connection timed out", 
+    "unreachable": true
+}
+2023-04-13 02:48:27,944 p=13291 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 02:48:38,243 p=13291 u=vagrant n=ansible | 172.31.0.245 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.0.245 port 22: Connection timed out", 
+    "unreachable": true
+}
+2023-04-13 02:57:11,505 p=13576 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 02:57:13,878 p=13576 u=vagrant n=ansible | [WARNING]: Platform linux on host 44.210.243.126 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-13 02:57:13,878 p=13576 u=vagrant n=ansible | 44.210.243.126 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-04-13 03:12:42,127 p=14007 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 03:12:42,804 p=14007 u=vagrant n=ansible | PLAY [jenkins-instance] ******************************************************************************************************
+2023-04-13 03:12:42,826 p=14007 u=vagrant n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2023-04-13 03:12:46,122 p=14007 u=vagrant n=ansible | [WARNING]: Platform linux on host 44.210.243.126 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-13 03:12:46,122 p=14007 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 03:12:46,152 p=14007 u=vagrant n=ansible | TASK [Update the system] *****************************************************************************************************
+2023-04-13 03:12:49,305 p=14007 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 03:12:49,330 p=14007 u=vagrant n=ansible | TASK [Add Jenkins repo] ******************************************************************************************************
+2023-04-13 03:12:50,652 p=14007 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 03:12:50,672 p=14007 u=vagrant n=ansible | TASK [Import Jenkins key file] ***********************************************************************************************
+2023-04-13 03:12:52,287 p=14007 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 03:12:52,308 p=14007 u=vagrant n=ansible | TASK [Install Java] **********************************************************************************************************
+2023-04-13 03:13:21,733 p=14007 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 03:13:21,753 p=14007 u=vagrant n=ansible | TASK [Import Jenkins project's GPG key] **************************************************************************************
+2023-04-13 03:13:23,311 p=14007 u=vagrant n=ansible | [WARNING]: Consider using the yum, dnf or zypper module rather than running 'rpm'.  If you need to use command because yum,
+dnf or zypper is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg
+to get rid of this message.
+
+2023-04-13 03:13:23,312 p=14007 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 03:13:23,331 p=14007 u=vagrant n=ansible | TASK [Install Jenkins] *******************************************************************************************************
+2023-04-13 03:14:10,040 p=14007 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 03:14:10,060 p=14007 u=vagrant n=ansible | TASK [Start Jenkins service] *************************************************************************************************
+2023-04-13 03:15:04,126 p=14007 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 03:15:04,145 p=14007 u=vagrant n=ansible | TASK [Check Jenkins service status] ******************************************************************************************
+2023-04-13 03:15:05,130 p=14007 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 03:15:05,156 p=14007 u=vagrant n=ansible | TASK [Print done message] ****************************************************************************************************
+2023-04-13 03:15:05,193 p=14007 u=vagrant n=ansible | ok: [44.210.243.126] => {
+    "msg": "*********done**************"
+}
+2023-04-13 03:15:05,204 p=14007 u=vagrant n=ansible | PLAY RECAP *******************************************************************************************************************
+2023-04-13 03:15:05,205 p=14007 u=vagrant n=ansible | 44.210.243.126             : ok=10   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-13 04:43:49,212 p=16381 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 04:43:49,790 p=16381 u=vagrant n=ansible | PLAY [jenkins-instance] ******************************************************************************************************
+2023-04-13 04:43:49,814 p=16381 u=vagrant n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2023-04-13 04:43:54,172 p=16381 u=vagrant n=ansible | [WARNING]: Platform linux on host 44.210.243.126 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-13 04:43:54,172 p=16381 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 04:43:54,192 p=16381 u=vagrant n=ansible | TASK [Download Maven] ********************************************************************************************************
+2023-04-13 04:43:55,623 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:43:55,641 p=16381 u=vagrant n=ansible | TASK [Extract Maven] *********************************************************************************************************
+2023-04-13 04:43:58,162 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:43:58,181 p=16381 u=vagrant n=ansible | TASK [Remove /opt/maven directory if it already exists] **********************************************************************
+2023-04-13 04:43:59,235 p=16381 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 04:43:59,252 p=16381 u=vagrant n=ansible | TASK [Rename Maven directory] ************************************************************************************************
+2023-04-13 04:44:00,513 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:44:00,532 p=16381 u=vagrant n=ansible | TASK [Update .bash_profile] **************************************************************************************************
+2023-04-13 04:44:01,847 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:44:01,863 p=16381 u=vagrant n=ansible | TASK [Replace .bash_profile content] *****************************************************************************************
+2023-04-13 04:44:03,027 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:44:03,046 p=16381 u=vagrant n=ansible | TASK [Source .bash_profile] **************************************************************************************************
+2023-04-13 04:44:03,864 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:44:03,884 p=16381 u=vagrant n=ansible | TASK [Check Maven Version] ***************************************************************************************************
+2023-04-13 04:44:05,632 p=16381 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 04:44:05,651 p=16381 u=vagrant n=ansible | TASK [Print Maven version] ***************************************************************************************************
+2023-04-13 04:44:05,741 p=16381 u=vagrant n=ansible | ok: [44.210.243.126] => {
+    "maven_output.stdout": "Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)\nMaven home: /opt/maven\nJava version: 11.0.18, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-11-amazon-corretto.x86_64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"5.10.173-154.642.amzn2.x86_64\", arch: \"amd64\", family: \"unix\""
+}
+2023-04-13 04:44:05,757 p=16381 u=vagrant n=ansible | TASK [Success Message] *******************************************************************************************************
+2023-04-13 04:44:05,801 p=16381 u=vagrant n=ansible | ok: [44.210.243.126] => {
+    "msg": "Maven Succefully installed and ready for use, happy building!!!!!"
+}
+2023-04-13 04:44:05,804 p=16381 u=vagrant n=ansible | PLAY RECAP *******************************************************************************************************************
+2023-04-13 04:44:05,804 p=16381 u=vagrant n=ansible | 44.210.243.126             : ok=11   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-13 05:09:44,646 p=17138 u=vagrant n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-04-13 05:09:45,230 p=17138 u=vagrant n=ansible | PLAY [jenkins-instance] ******************************************************************************************************
+2023-04-13 05:09:45,251 p=17138 u=vagrant n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2023-04-13 05:09:48,619 p=17138 u=vagrant n=ansible | [WARNING]: Platform linux on host 44.210.243.126 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-13 05:09:48,619 p=17138 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 05:09:48,640 p=17138 u=vagrant n=ansible | TASK [Download Maven] ********************************************************************************************************
+2023-04-13 05:09:49,777 p=17138 u=vagrant n=ansible | ok: [44.210.243.126]
+2023-04-13 05:09:49,795 p=17138 u=vagrant n=ansible | TASK [Extract Maven] *********************************************************************************************************
+2023-04-13 05:09:52,308 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:52,325 p=17138 u=vagrant n=ansible | TASK [Remove /opt/maven directory if it already exists] **********************************************************************
+2023-04-13 05:09:53,305 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:53,327 p=17138 u=vagrant n=ansible | TASK [Rename Maven directory] ************************************************************************************************
+2023-04-13 05:09:54,307 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:54,326 p=17138 u=vagrant n=ansible | TASK [Update .bash_profile] **************************************************************************************************
+2023-04-13 05:09:55,520 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:55,545 p=17138 u=vagrant n=ansible | TASK [Replace .bash_profile content] *****************************************************************************************
+2023-04-13 05:09:56,864 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:56,882 p=17138 u=vagrant n=ansible | TASK [Source .bash_profile] **************************************************************************************************
+2023-04-13 05:09:57,783 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:57,801 p=17138 u=vagrant n=ansible | TASK [Check Maven Version] ***************************************************************************************************
+2023-04-13 05:09:59,172 p=17138 u=vagrant n=ansible | changed: [44.210.243.126]
+2023-04-13 05:09:59,193 p=17138 u=vagrant n=ansible | TASK [Print Maven version] ***************************************************************************************************
+2023-04-13 05:09:59,274 p=17138 u=vagrant n=ansible | ok: [44.210.243.126] => {
+    "maven_output.stdout": "Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)\nMaven home: /opt/maven\nJava version: 11.0.18, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-11-amazon-corretto.x86_64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"5.10.173-154.642.amzn2.x86_64\", arch: \"amd64\", family: \"unix\""
+}
+2023-04-13 05:09:59,290 p=17138 u=vagrant n=ansible | TASK [Success Message] *******************************************************************************************************
+2023-04-13 05:09:59,326 p=17138 u=vagrant n=ansible | ok: [44.210.243.126] => {
+    "msg": "Maven Succefully installed and ready for use, happy building!!!!!"
+}
+2023-04-13 05:09:59,334 p=17138 u=vagrant n=ansible | PLAY RECAP *******************************************************************************************************************
+2023-04-13 05:09:59,334 p=17138 u=vagrant n=ansible | 44.210.243.126             : ok=11   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-14 02:35:26,310 p=16947 u=vagrant n=ansible | - downloading role 'sonar', owned by geerlingguy
+2023-04-14 02:35:26,879 p=16947 u=vagrant n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-sonar/archive/1.4.1.tar.gz
+2023-04-14 02:35:27,534 p=16947 u=vagrant n=ansible | - extracting geerlingguy.sonar to /home/vagrant/Pipeline_ansible_files/roles/geerlingguy.sonar
+2023-04-14 02:35:27,542 p=16947 u=vagrant n=ansible | - geerlingguy.sonar (1.4.1) was installed successfully
+2023-04-14 02:35:27,546 p=16947 u=vagrant n=ansible | - adding dependency: geerlingguy.java
+2023-04-14 02:35:27,546 p=16947 u=vagrant n=ansible | - adding dependency: geerlingguy.mysql
+2023-04-14 02:35:27,546 p=16947 u=vagrant n=ansible | - downloading role 'java', owned by geerlingguy
+2023-04-14 02:35:28,048 p=16947 u=vagrant n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-java/archive/2.3.0.tar.gz
+2023-04-14 02:35:28,525 p=16947 u=vagrant n=ansible | - extracting geerlingguy.java to /home/vagrant/Pipeline_ansible_files/roles/geerlingguy.java
+2023-04-14 02:35:28,539 p=16947 u=vagrant n=ansible | - geerlingguy.java (2.3.0) was installed successfully
+2023-04-14 02:35:28,540 p=16947 u=vagrant n=ansible | - downloading role 'mysql', owned by geerlingguy
+2023-04-14 02:35:29,288 p=16947 u=vagrant n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-mysql/archive/4.3.2.tar.gz
+2023-04-14 02:35:29,760 p=16947 u=vagrant n=ansible | - extracting geerlingguy.mysql to /home/vagrant/Pipeline_ansible_files/roles/geerlingguy.mysql
+2023-04-14 02:35:29,773 p=16947 u=vagrant n=ansible | - geerlingguy.mysql (4.3.2) was installed successfully
+2023-04-15 20:51:28,754 p=30153 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ping
+
+2023-04-15 20:51:28,755 p=30153 u=vagrant n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2023-04-15 20:52:05,739 p=30182 u=vagrant n=ansible | [WARNING]: Platform linux on host 3.234.218.14 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-15 20:52:05,740 p=30182 u=vagrant n=ansible | 3.234.218.14 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-04-15 20:53:09,045 p=30228 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: jenkins-instance
+
+2023-04-15 20:53:09,047 p=30228 u=vagrant n=ansible | PLAY [jenkins-instance] **********************************************************************************************************
+2023-04-15 20:53:09,047 p=30228 u=vagrant n=ansible | skipping: no hosts matched
+2023-04-15 20:53:09,047 p=30228 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-15 20:53:52,879 p=30238 u=vagrant n=ansible | PLAY [jenkins] *******************************************************************************************************************
+2023-04-15 20:53:52,908 p=30238 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-15 20:53:56,191 p=30238 u=vagrant n=ansible | [WARNING]: Platform linux on host 3.234.218.14 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-15 20:53:56,191 p=30238 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-15 20:53:56,227 p=30238 u=vagrant n=ansible | TASK [Update the system] *********************************************************************************************************
+2023-04-15 20:53:59,355 p=30238 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-15 20:53:59,396 p=30238 u=vagrant n=ansible | TASK [Add Jenkins repo] **********************************************************************************************************
+2023-04-15 20:54:00,948 p=30238 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-15 20:54:00,968 p=30238 u=vagrant n=ansible | TASK [Import Jenkins key file] ***************************************************************************************************
+2023-04-15 20:54:02,578 p=30238 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-15 20:54:02,598 p=30238 u=vagrant n=ansible | TASK [Install Java] **************************************************************************************************************
+2023-04-15 20:54:32,376 p=30238 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-15 20:54:32,400 p=30238 u=vagrant n=ansible | TASK [Import Jenkins project's GPG key] ******************************************************************************************
+2023-04-15 20:54:34,071 p=30238 u=vagrant n=ansible | [WARNING]: Consider using the yum, dnf or zypper module rather than running 'rpm'.  If you need to use command because yum, dnf
+or zypper is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get
+rid of this message.
+
+2023-04-15 20:54:34,071 p=30238 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-15 20:54:34,094 p=30238 u=vagrant n=ansible | TASK [Install Jenkins] ***********************************************************************************************************
+2023-04-15 20:54:59,266 p=30238 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-15 20:54:59,286 p=30238 u=vagrant n=ansible | TASK [Start Jenkins service] *****************************************************************************************************
+2023-04-15 20:55:51,737 p=30238 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-15 20:55:51,777 p=30238 u=vagrant n=ansible | TASK [Check Jenkins service status] **********************************************************************************************
+2023-04-15 20:55:52,881 p=30238 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-15 20:55:52,927 p=30238 u=vagrant n=ansible | TASK [Print done message] ********************************************************************************************************
+2023-04-15 20:55:52,996 p=30238 u=vagrant n=ansible | ok: [3.234.218.14] => {
+    "msg": "*********done**************"
+}
+2023-04-15 20:55:53,001 p=30238 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-15 20:55:53,002 p=30238 u=vagrant n=ansible | 3.234.218.14               : ok=10   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-16 01:00:18,899 p=3149 u=vagrant n=ansible | PLAY [jenkins] *******************************************************************************************************************
+2023-04-16 01:00:18,920 p=3149 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-16 01:00:21,939 p=3149 u=vagrant n=ansible | [WARNING]: Platform linux on host 3.234.218.14 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-16 01:00:21,939 p=3149 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:00:21,969 p=3149 u=vagrant n=ansible | TASK [Update the system] *********************************************************************************************************
+2023-04-16 01:00:25,790 p=3149 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:00:25,812 p=3149 u=vagrant n=ansible | TASK [Add Jenkins repo] **********************************************************************************************************
+2023-04-16 01:00:26,961 p=3149 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:00:26,978 p=3149 u=vagrant n=ansible | TASK [Import Jenkins key file] ***************************************************************************************************
+2023-04-16 01:00:28,345 p=3149 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:00:28,364 p=3149 u=vagrant n=ansible | TASK [Install Java] **************************************************************************************************************
+2023-04-16 01:00:29,746 p=3149 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:00:29,775 p=3149 u=vagrant n=ansible | TASK [Import Jenkins project's GPG key] ******************************************************************************************
+2023-04-16 01:00:31,099 p=3149 u=vagrant n=ansible | [WARNING]: Consider using the yum, dnf or zypper module rather than running 'rpm'.  If you need to use command because yum, dnf
+or zypper is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get
+rid of this message.
+
+2023-04-16 01:00:31,100 p=3149 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-16 01:00:31,118 p=3149 u=vagrant n=ansible | TASK [Install Jenkins] ***********************************************************************************************************
+2023-04-16 01:00:49,731 p=3149 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-16 01:00:49,749 p=3149 u=vagrant n=ansible | TASK [Start Jenkins service] *****************************************************************************************************
+2023-04-16 01:01:16,470 p=3149 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-16 01:01:16,494 p=3149 u=vagrant n=ansible | TASK [Check Jenkins service status] **********************************************************************************************
+2023-04-16 01:01:17,523 p=3149 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:01:17,546 p=3149 u=vagrant n=ansible | TASK [Print done message] ********************************************************************************************************
+2023-04-16 01:01:17,573 p=3149 u=vagrant n=ansible | ok: [3.234.218.14] => {
+    "msg": "*********done**************"
+}
+2023-04-16 01:01:17,582 p=3149 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-16 01:01:17,583 p=3149 u=vagrant n=ansible | 3.234.218.14               : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-16 01:19:17,659 p=3677 u=vagrant n=ansible | PLAY [jenkins] *******************************************************************************************************************
+2023-04-16 01:19:17,683 p=3677 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-16 01:19:20,731 p=3677 u=vagrant n=ansible | [WARNING]: Platform linux on host 3.234.218.14 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-16 01:19:20,732 p=3677 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:19:20,757 p=3677 u=vagrant n=ansible | TASK [Update the system] *********************************************************************************************************
+2023-04-16 01:19:24,663 p=3677 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:19:24,683 p=3677 u=vagrant n=ansible | TASK [Add Jenkins repo] **********************************************************************************************************
+2023-04-16 01:19:25,812 p=3677 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:19:25,830 p=3677 u=vagrant n=ansible | TASK [Import Jenkins key file] ***************************************************************************************************
+2023-04-16 01:19:27,121 p=3677 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:19:27,139 p=3677 u=vagrant n=ansible | TASK [Install Java] **************************************************************************************************************
+2023-04-16 01:19:28,488 p=3677 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:19:28,509 p=3677 u=vagrant n=ansible | TASK [Import Jenkins project's GPG key] ******************************************************************************************
+2023-04-16 01:19:29,561 p=3677 u=vagrant n=ansible | [WARNING]: Consider using the yum, dnf or zypper module rather than running 'rpm'.  If you need to use command because yum, dnf
+or zypper is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get
+rid of this message.
+
+2023-04-16 01:19:29,561 p=3677 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-16 01:19:29,580 p=3677 u=vagrant n=ansible | TASK [Install Jenkins] ***********************************************************************************************************
+2023-04-16 01:19:48,367 p=3677 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-16 01:19:48,387 p=3677 u=vagrant n=ansible | TASK [Start Jenkins service] *****************************************************************************************************
+2023-04-16 01:20:41,672 p=3677 u=vagrant n=ansible | changed: [3.234.218.14]
+2023-04-16 01:20:41,695 p=3677 u=vagrant n=ansible | TASK [Check Jenkins service status] **********************************************************************************************
+2023-04-16 01:20:42,703 p=3677 u=vagrant n=ansible | ok: [3.234.218.14]
+2023-04-16 01:20:42,722 p=3677 u=vagrant n=ansible | TASK [Print done message] ********************************************************************************************************
+2023-04-16 01:20:42,756 p=3677 u=vagrant n=ansible | ok: [3.234.218.14] => {
+    "msg": "*********done**************"
+}
+2023-04-16 01:20:42,760 p=3677 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-16 01:20:42,760 p=3677 u=vagrant n=ansible | 3.234.218.14               : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-17 17:22:40,575 p=21704 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: jenkins-instance
+
+2023-04-17 17:22:40,576 p=21704 u=vagrant n=ansible | PLAY [jenkins-instance] **********************************************************************************************************
+2023-04-17 17:22:40,577 p=21704 u=vagrant n=ansible | skipping: no hosts matched
+2023-04-17 17:22:40,577 p=21704 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-17 17:23:38,738 p=21736 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: jenkins-instance
+
+2023-04-17 17:23:38,740 p=21736 u=vagrant n=ansible | PLAY [jenkins-instance] **********************************************************************************************************
+2023-04-17 17:23:38,740 p=21736 u=vagrant n=ansible | skipping: no hosts matched
+2023-04-17 17:23:38,740 p=21736 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-17 17:24:00,302 p=21744 u=vagrant n=ansible | ERROR! the playbook: jenkins could not be found
+2023-04-17 17:24:22,585 p=21769 u=vagrant n=ansible | ERROR! the playbook: jenkins could not be found
+2023-04-17 17:25:31,445 p=21794 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: jenkins-instance
+
+2023-04-17 17:25:31,446 p=21794 u=vagrant n=ansible | PLAY [jenkins-instance] **********************************************************************************************************
+2023-04-17 17:25:31,446 p=21794 u=vagrant n=ansible | skipping: no hosts matched
+2023-04-17 17:25:31,446 p=21794 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-17 17:26:09,202 p=21823 u=vagrant n=ansible | PLAY [jenkins] *******************************************************************************************************************
+2023-04-17 17:26:09,224 p=21823 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-17 17:26:12,846 p=21823 u=vagrant n=ansible | [WARNING]: Platform linux on host 44.211.30.80 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-17 17:26:12,846 p=21823 u=vagrant n=ansible | ok: [44.211.30.80]
+2023-04-17 17:26:12,876 p=21823 u=vagrant n=ansible | TASK [Download Maven] ************************************************************************************************************
+2023-04-17 17:26:14,604 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:14,627 p=21823 u=vagrant n=ansible | TASK [Extract Maven] *************************************************************************************************************
+2023-04-17 17:26:17,387 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:17,406 p=21823 u=vagrant n=ansible | TASK [Remove /opt/maven directory if it already exists] **************************************************************************
+2023-04-17 17:26:18,497 p=21823 u=vagrant n=ansible | ok: [44.211.30.80]
+2023-04-17 17:26:18,516 p=21823 u=vagrant n=ansible | TASK [Rename Maven directory] ****************************************************************************************************
+2023-04-17 17:26:20,135 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:20,153 p=21823 u=vagrant n=ansible | TASK [Update .bash_profile] ******************************************************************************************************
+2023-04-17 17:26:21,440 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:21,463 p=21823 u=vagrant n=ansible | TASK [Replace .bash_profile content] *********************************************************************************************
+2023-04-17 17:26:22,622 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:22,646 p=21823 u=vagrant n=ansible | TASK [Source .bash_profile] ******************************************************************************************************
+2023-04-17 17:26:23,647 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:23,665 p=21823 u=vagrant n=ansible | TASK [Check Maven Version] *******************************************************************************************************
+2023-04-17 17:26:25,386 p=21823 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:26:25,405 p=21823 u=vagrant n=ansible | TASK [Print Maven version] *******************************************************************************************************
+2023-04-17 17:26:25,496 p=21823 u=vagrant n=ansible | ok: [44.211.30.80] => {
+    "maven_output.stdout": "Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)\nMaven home: /opt/maven\nJava version: 11.0.18, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-11-amazon-corretto.x86_64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"5.10.176-157.645.amzn2.x86_64\", arch: \"amd64\", family: \"unix\""
+}
+2023-04-17 17:26:25,513 p=21823 u=vagrant n=ansible | TASK [Success Message] ***********************************************************************************************************
+2023-04-17 17:26:25,554 p=21823 u=vagrant n=ansible | ok: [44.211.30.80] => {
+    "msg": "Maven Succefully installed and ready for use, happy building!!!!!"
+}
+2023-04-17 17:26:25,557 p=21823 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-17 17:26:25,557 p=21823 u=vagrant n=ansible | 44.211.30.80               : ok=11   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-17 17:28:44,236 p=21972 u=vagrant n=ansible | PLAY [Install Java on Amazon Linux 2] ********************************************************************************************
+2023-04-17 17:28:44,259 p=21972 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-17 17:28:47,607 p=21972 u=vagrant n=ansible | [WARNING]: Platform linux on host 44.211.30.80 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-17 17:28:47,607 p=21972 u=vagrant n=ansible | ok: [44.211.30.80]
+2023-04-17 17:28:47,633 p=21972 u=vagrant n=ansible | TASK [Install Java 1.8.0] ********************************************************************************************************
+2023-04-17 17:29:11,030 p=21972 u=vagrant n=ansible | changed: [44.211.30.80]
+2023-04-17 17:29:11,033 p=21972 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-17 17:29:11,033 p=21972 u=vagrant n=ansible | 44.211.30.80               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-18 01:18:56,681 p=31856 u=vagrant n=ansible | PLAY [Install Java-11 on Amazon Linux 2] *****************************************************************************************
+2023-04-18 01:18:56,704 p=31856 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-18 01:19:00,146 p=31856 u=vagrant n=ansible | [WARNING]: Platform linux on host 3.235.238.172 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-18 01:19:00,147 p=31856 u=vagrant n=ansible | ok: [3.235.238.172]
+2023-04-18 01:19:00,170 p=31856 u=vagrant n=ansible | TASK [Install Java 11.0.14] ******************************************************************************************************
+2023-04-18 01:19:04,829 p=31856 u=vagrant n=ansible | fatal: [3.235.238.172]: FAILED! => {"changed": false, "msg": "No package matching 'java-11-openjdk' found available, installed or updated", "rc": 126, "results": ["No package matching 'java-11-openjdk' found available, installed or updated"]}
+2023-04-18 01:19:04,830 p=31856 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-18 01:19:04,830 p=31856 u=vagrant n=ansible | 3.235.238.172              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-18 01:20:20,330 p=31930 u=vagrant n=ansible | PLAY [Install Java-11 on Amazon Linux 2] *****************************************************************************************
+2023-04-18 01:20:20,352 p=31930 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2023-04-18 01:20:23,996 p=31930 u=vagrant n=ansible | [WARNING]: Platform linux on host 3.235.238.172 is using the discovered Python interpreter at /usr/bin/python, but future
+installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2023-04-18 01:20:23,996 p=31930 u=vagrant n=ansible | ok: [3.235.238.172]
+2023-04-18 01:20:24,018 p=31930 u=vagrant n=ansible | TASK [Install Java 11.0.14] ******************************************************************************************************
+2023-04-18 01:20:27,364 p=31930 u=vagrant n=ansible | fatal: [3.235.238.172]: FAILED! => {"changed": false, "msg": "No package matching 'java-openjdk11' found available, installed or updated", "rc": 126, "results": ["No package matching 'java-openjdk11' found available, installed or updated"]}
+2023-04-18 01:20:27,365 p=31930 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-04-18 01:20:27,366 p=31930 u=vagrant n=ansible | 3.235.238.172              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   

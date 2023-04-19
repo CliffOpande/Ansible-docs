@@ -1,0 +1,8 @@
+- hosts: 54.147.28.235
+  become: true
+  tasks:
+    - name: Add Ansible SSH key to authorized_keys
+      authorized_key:
+        user: ec2-user
+        key: "{{ lookup('file', '/home/vagrant/Pipeline_ansible_files/.ansible_key1.pub') }}"
+

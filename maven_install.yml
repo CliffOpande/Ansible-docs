@@ -1,0 +1,48 @@
+---
+- name: Install Maven
+  hosts: all
+  become: true
+  tasks:
+    - name: Update system
+      yum:
+        name: '*'
+        state: latest
+      become: true
+
+    - name: Install Java JDK
+      yum:
+        name: java-1.8.0-openjdk-devel
+        state: present
+      become: true
+
+    - name: Create Maven directory
+      file:
+        path: /opt/maven
+        state: directory
+        mode: '0755'
+      become: true
+
+    - name: Download Maven
+      get_url:
+        url: https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
+        dest: /tmp/apache-maven-3.9.1-bin.tar.gz
+
+    - name: Extract Maven
+      unarchive:
+        src: /tmp/apache-maven-3.9.1-bin.tar.gz
+        dest: /opt/maven
+        remote_src: yes
+
+    - name: Set Maven environment variables
+      lineinfile:
+        dest: /etc/profile.d/maven.sh
+        line: "export M2_HOME=/opt/maven/apache-maven-3.9.1\nexport PATH=$PATH:$M2_HOME/bin"
+        create: yes
+        insertafter: EOF
+
+    - name: Reload profile
+      shell: source /etc/profile
+
+    - name: Verify Maven installation
+      command: mvn -version
+

@@ -1,0 +1,68 @@
+---
+- hosts: jenkins
+  become: true
+  tasks:
+    - name: Download Maven
+      get_url:
+        url: "https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz"
+        dest: "/tmp/apache-maven-3.9.1-bin.tar.gz"
+        mode: '0644'
+      register: downloaded_file
+
+    - name: Extract Maven
+      unarchive:
+        src: "{{ downloaded_file.dest }}"
+        dest: "/opt"
+        remote_src: yes
+
+    - name: Remove /opt/maven directory if it already exists
+      file:
+        path: /opt/maven
+        state: absent
+
+
+    - name: Rename Maven directory
+      command: mv -f /opt/apache-maven-3.9.1 /opt/maven
+
+    - name: Update .bash_profile
+      lineinfile:
+        path: ~/.bash_profile
+        state: absent
+        regexp: '.*'
+        backup: yes  
+
+    - name: Replace .bash_profile content
+      blockinfile:
+        path: ~/.bash_profile
+        block: |
+          # .bash_profile
+
+           # Get the aliases and functions
+           if [ -f ~/.bashrc ]; then
+                . ~/.bashrc
+           fi
+
+           # User specific environment and startup programs
+           M2_HOME=/opt/maven
+           M2=$M2_HOME/bin
+           JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
+           SONAR_RUNNER_HOME=/opt/sonar-scanner
+           PATH=$PATH:$HOME/.local/bin:$HOMebin:JAVA_HOME:$M2_HOME:$M2:$SONAR_RUNNER_HOME
+           export PATH
+
+    - name: Source .bash_profile
+      shell: source ~/.bash_profile
+
+    - name: Check Maven Version
+      command: mvn -version
+      environment: 
+        PATH: "{{ ansible_env.PATH }}:/opt/maven/bin"   
+      register: maven_output
+
+    - name: Print Maven version
+      debug:
+         var: maven_output.stdout
+ 
+    - name: Success Message
+      debug:
+        msg: "Maven Succefully installed and ready for use, happy building!!!!!"

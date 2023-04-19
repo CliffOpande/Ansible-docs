@@ -1,0 +1,26 @@
+---
+- name: Install Git on Amazon Linux 2 with GitHub credentials
+  hosts: jenkins-instance
+  become: true
+
+  vars_prompt:
+    - name: "github_username"
+      prompt: "Enter your GitHub username"
+      private: no
+
+    - name: "github_password"
+      prompt: "Enter your GitHub password"
+      private: yes
+
+  tasks:
+    - name: Install Git
+      package:
+        name: git
+        state: present
+
+    - name: Set Git configuration
+      become_user: ec2-user
+      shell: |
+        git config --global user.name "{{ github_username }}"
+        git config --global user.password "{{ github_password }}"
+

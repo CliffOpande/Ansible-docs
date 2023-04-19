@@ -1,0 +1,11 @@
+- name: Add key to authorized_keys
+  hosts: 172.31.0.245 
+  tasks:
+    - name: Add Ansible SSH key to authorized_keys
+      lineinfile:
+        path: /home/ec2-user/.ssh/authorized_keys
+        line: "{{ lookup('file', '/home/vagrant/Pipeline_ansible_files/.ansible_key1.pub') }}"
+        state: present
+        mode: "0600"
+        create: yes
+

@@ -1,0 +1,47 @@
+---
+- hosts: jenkins
+  become: true
+
+  tasks:
+    - name: Update the system
+      yum:
+        state: latest
+
+    - name: Add Jenkins repo
+      get_url:
+        url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+        dest: /etc/yum.repos.d/jenkins.repo
+
+    - name: Import Jenkins key file
+      rpm_key:
+        key: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+        state: present
+
+    - name: Install Java
+      yum:
+        name: java-11-amazon-corretto
+        state: present
+
+    - name: Import Jenkins project's GPG key
+      shell: rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+                
+    - name: Install Jenkins
+      yum:
+        name: jenkins
+        state: present
+
+    - name: Start Jenkins service
+      systemd:
+        name: jenkins
+        enabled: yes
+        state: started
+
+    - name: Check Jenkins service status
+      systemd:
+        name: jenkins
+        state: started
+
+    - name: Print done message
+      debug:
+        msg: "*********done**************"
+

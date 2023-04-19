@@ -1,0 +1,15 @@
+---
+- hosts: jenkins-instance
+  become: true
+  vars:
+    java_packages:
+      - java-1.8.0-openjdk
+      - java-1.8.0-openjdk-devel
+      - java-1.8.0-openjdk-headless
+  tasks:
+    - name: Uninstall Java
+      yum:
+        name: "{{ item }}"
+        state: absent
+      with_items: "{{ java_packages }}"
+
